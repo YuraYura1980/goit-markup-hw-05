@@ -339,12 +339,30 @@ ul {
 }
 
 .occupation-list {
+
+  
   padding: 0;
   margin: 0;
   list-style: 0;
 
   display: flex;
   justify-content: space-between;
+
+
+}
+
+.occupation-item {
+position: relative;
+}
+
+
+.thumbs {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  /* opacity: 0.6; */
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .occupation-title {
@@ -621,3 +639,6 @@ ul {
   color: var(--second-color);
   background-color: var(--activ-color);
 }
+
+
+
