@@ -18,6 +18,8 @@ html {
   --clients-color: #afb1b8;
 
   --footer-rjba-color: rgba(255, 255, 255, 0.6);
+
+  --timing-function: 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
 body {
@@ -111,6 +113,30 @@ ul {
   align-items: center;
 }
 
+.header-line {
+ 
+  position: relative;
+}
+
+.header-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 48px;
+  height: 4px;
+  background-color: var(--activ-color);
+  background-position: center;
+  border-radius: 2px;
+
+  /* transition: width var(--timing-function) ; */
+}
+/* 
+.header-line:hover::after {
+  width: 100%;
+} */
+
 .header-link {
   display: flex;
 
@@ -150,6 +176,7 @@ ul {
 .link:hover,
 .link:focus {
   color: var(--activ-color);
+  transition: var(--timing-function);
 }
 
 .header-icon {
@@ -167,6 +194,7 @@ ul {
 .header-link-icon:hover,
 .header-link-icon:focus {
   color: var(--activ-color);
+  transition: var(--timing-function);
 }
 
 .header-icon {
@@ -239,6 +267,7 @@ ul {
   background-color: var(--activ-color);
   /* transform: scale(1.03); */
   cursor: pointer;
+  transition: var(--timing-function);
 }
 
 /* about */
@@ -339,22 +368,21 @@ ul {
 }
 
 .occupation-list {
-
-  
   padding: 0;
   margin: 0;
   list-style: 0;
 
   display: flex;
   justify-content: space-between;
-
-
 }
 
 .occupation-item {
-position: relative;
+  position: relative;
 }
 
+.occupation-list:hover .thumbs {
+  opacity: 1;
+}
 
 .thumbs {
   position: absolute;
@@ -363,6 +391,8 @@ position: relative;
   display: flex;
   /* opacity: 0.6; */
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  opacity: 0;
+  transition: 500ms opacity linear;
 }
 
 .occupation-title {
@@ -472,6 +502,7 @@ position: relative;
 .team-link-icon:focus {
   color: #ffffff;
   background-color: #2196f3;
+  transition: var(--timing-function);
 }
 
 .team-item-icon {
@@ -522,6 +553,7 @@ position: relative;
 .client-link:focus {
   color: var(--activ-color);
   border-color: var(--activ-color);
+  transition: var(--timing-function);
 }
 
 /* Footer  */
@@ -638,7 +670,5 @@ position: relative;
 .footer-link-icon:focus {
   color: var(--second-color);
   background-color: var(--activ-color);
+  transition: var(--timing-function);
 }
-
-
-
