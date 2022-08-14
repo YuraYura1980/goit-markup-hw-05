@@ -126,7 +126,8 @@ ul {
 
   color: var(--primery-text-color);
 
-  transition: color var(--timing-function),  background-color var(--timing-function);
+  transition: color var(--timing-function),
+    background-color var(--timing-function);
 }
 
 .header-link.current {
@@ -149,13 +150,10 @@ ul {
   letter-spacing: 0.02em;
   color: var(--accent-color);
   gap: 30px;
-
-  transition: color var(--timing-function);
-
 }
 
 .link {
-  transition:color var(--timing-function);
+  transition: color var(--timing-function);
 }
 
 .link:hover,
@@ -202,7 +200,7 @@ ul {
   background-position: center;
   border-radius: 2px;
 
-  transition: color var(--timing-function);
+  /* transform: translateY(-15px); */
 }
 
 .section {
@@ -262,14 +260,15 @@ ul {
   color: var(--second-color);
   background-color: var(--activ-color);
   transform: scale(1.03);
-  transition: transform color var(--timing-function);
+  transition: transform var(--timing-function),
+    background-color var(--timing-function), color var(--timing-function),
+    cursor var(--timing-function);
 }
 
 .main-btn:hover,
 .main-btn:focus {
   color: rgb(231, 223, 219);
   background-color: rgba(231, 194, 27, 0.5);
-  /* color: #ffffff; */
   cursor: pointer;
 }
 
@@ -287,10 +286,7 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primery-text-color);
-
-  transition: var(--timing-function);
 }
-
 
 .visually-hidden {
   position: absolute;
@@ -338,10 +334,6 @@ ul {
   margin-bottom: 10px;
 
   width: 270px;
-  /* height: 16px;
-  left: 215px;
-  top: 774px; */
-
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -351,16 +343,12 @@ ul {
 }
 
 .about-text {
-  /* font-weight: 400; */
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--accent-color);
 
   width: 270px;
-  /* height: 101px;
-  left: 515px;
-  top: 774px; */
 }
 
 .about-list > .about-item:not(:last-child) {
@@ -386,19 +374,13 @@ ul {
   position: relative;
 }
 
-/* .occupation-list:hover .thumbs {
-  opacity: 1;
-} */
-
 .thumbs {
   position: absolute;
   bottom: 0;
   right: 0;
   display: flex;
- 
+
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  /* opacity: 0; */
- 
 }
 
 .occupation-title {
@@ -499,9 +481,9 @@ ul {
 
   color: var(--clients-color);
 
-  transition: var(--timing-function);
+  transition: color var(--timing-function),
+    background-color var(--timing-function);
 }
-
 
 .team-icon {
   fill: currentColor;
@@ -511,7 +493,6 @@ ul {
 .team-link-icon:focus {
   color: #ffffff;
   background-color: #2196f3;
-  
 }
 
 .team-item-icon {
@@ -553,7 +534,7 @@ ul {
 
   color: var(--clients-color);
 
-  transition: var(--timing-function);
+  transition: color var(--timing-function), border-color var(--timing-function);
 }
 
 .client-icon {
@@ -671,7 +652,8 @@ ul {
 
   color: var(--second-color);
 
-  transition: var(--timing-function);
+  transition: color var(--timing-function),
+    background-color var(--timing-function);
 }
 
 .footer-icon {
