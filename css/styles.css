@@ -292,6 +292,41 @@ ul {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.project-item-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-overlay-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background-color: var(--activ-color);
+
+  transition: transform var(--timing-function), color var(--timing-function);
+}
+
+.project-item-overlay:hover .project-overlay-slide {
+  transform: translateY(0);
+}
+
+.project-overlay-desks {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+}
+
 .project-overlay {
   position: relative;
   overflow: hidden;
@@ -317,21 +352,25 @@ ul {
 
 .project-overlay-text {
   display: flex;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
 
   position: absolute;
   width: 100%;
+  padding: 25px;
 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  color: var(--second-color);
   opacity: 0;
   transition: transform var(--timing-function), color var(--timing-function);
+}
+
+.project-overlay-desk {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
 }
 
 .project-item:hover .project-overlay-text {
