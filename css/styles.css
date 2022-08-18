@@ -312,7 +312,7 @@ ul {
   padding: 25px;
   background-color: var(--activ-color);
 
-  transition: transform var(--timing-function), color var(--timing-function);
+  transition: transform var(--timing-function), color var(--timing-function), background-color var(--timing-function);
 }
 
 .project-item-overlay:hover .project-overlay-slide {
