@@ -249,16 +249,13 @@ ul {
   background-color: var(--background-team-color);
 
   transition: color var(--timing-function),
-    background-color var(--timing-function);
+    background-color var(--timing-function), filter var(--timing-function);
 }
 
 .main-btn:hover,
 .main-btn:focus {
   color: var(--second-color);
   background-color: var(--activ-color);
-}
-
-.main-item:hover {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -293,6 +290,8 @@ ul {
 }
 
 .project-item-overlay {
+  transition: box-shadow var(--timing-function);
+
   position: relative;
   overflow: hidden;
 }
@@ -312,10 +311,12 @@ ul {
   padding: 25px;
   background-color: var(--activ-color);
 
-  transition: transform var(--timing-function), color var(--timing-function), background-color var(--timing-function);
+  transition: transform var(--timing-function), color var(--timing-function),
+    background-color var(--timing-function);
 }
 
-.project-item-overlay:hover .project-overlay-slide {
+.project-item-overlay:hover .project-overlay-slide,
+.project-item-overlay:focus .project-overlay-slide {
   transform: translateY(0);
 }
 
@@ -332,7 +333,7 @@ ul {
   overflow: hidden;
 }
 
-.project-overlay::before {
+/* .project-overlay::before {
   display: inline-block;
   position: absolute;
   content: "";
@@ -344,13 +345,14 @@ ul {
     background-color var(--timing-function);
 
   transform: translateY(100%);
-}
+} */
 
-.project-item:hover .project-overlay::before {
+/* .project-item:hover .project-overlay::before,
+.project-item:focus .project-overlay::before {
   transform: translateY(0);
-}
+} */
 
-.project-overlay-text {
+/* .project-overlay-text {
   display: flex;
 
   position: absolute;
@@ -363,19 +365,20 @@ ul {
 
   opacity: 0;
   transition: transform var(--timing-function), color var(--timing-function);
-}
+} */
 
-.project-overlay-desk {
+/* .project-overlay-desk {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--second-color);
-}
+} */
 
-.project-item:hover .project-overlay-text {
+/* .project-item:hover .project-overlay-text,
+.project-item:focus .project-overlay-text {
   opacity: 1;
-}
+} */
 
 .project-group {
   padding: 20px 24px;
